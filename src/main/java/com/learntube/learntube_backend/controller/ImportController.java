@@ -22,6 +22,9 @@ public class ImportController {
 
     public Playlist importPlaylist(@RequestBody ImportRequest request){
 
+        System.out.println("IMPORT API HIT");
+
+
         return importService.importPlaylist(request);
 
     }
