@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: learntube-backend
+    runtime: java
+    plan: free
+
+    buildCommand: "./mvnw clean package -DskipTests"
+
+    startCommand: "java -jar target/*.jar"
+
+    envVars:
+      - key: DB_URL
+        sync: false
+
+      - key: DB_USERNAME
+        sync: false
+
+      - key: DB_PASSWORD
+        sync: false
+      - key: YOUTUBE_API_KEY
+        sync: false
